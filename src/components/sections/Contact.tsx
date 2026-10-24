@@ -80,19 +80,28 @@ const Contact = () => {
 
   return (
     <div
-      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
+      className={`flex flex-col-reverse gap-8 overflow-hidden sm:gap-10 xl:mt-12 xl:flex-row`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="bg-black-100 flex-[0.75] rounded-2xl p-8"
+        className="bg-black-100 flex-[0.75] rounded-2xl p-5 sm:p-8"
       >
         <Header useMotion={false} {...config.contact} />
+
+        <a
+          href={config.html.telegram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#229ED9] px-4 py-3 text-center text-sm font-semibold text-white sm:w-auto"
+        >
+          Message on Telegram · {config.html.telegramHandle}
+        </a>
 
         <form
           // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-8 flex flex-col gap-8 sm:mt-12"
         >
           {Object.keys(config.contact.form).map((input) => {
             const { span, placeholder } =

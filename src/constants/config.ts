@@ -9,6 +9,8 @@ type TConfig = {
     title: string;
     fullName: string;
     email: string;
+    telegram: string;
+    telegramHandle: string;
   };
   hero: {
     name: string;
@@ -43,6 +45,8 @@ export const config: TConfig = {
     title: "Kian Zarandi — Orbit Desk",
     fullName: "Kian Zarandi",
     email: "kianzarandi701@gmail.com",
+    telegram: "https://t.me/Kian_asli",
+    telegramHandle: "@Kian_asli",
   },
   hero: {
     name: "Kian",
@@ -70,8 +74,8 @@ export const config: TConfig = {
       content: `I'm a builder across Solidity protocol labs, Rust systems, Go
       gateways, Flutter apps, and Vue/Node product surfaces. I ship live
       demos, keep the stack practical, and care about defensive security
-      edges. Based in Iran · freelance via zyrax.ir — let's build something
-      that holds up in production.`,
+      edges. Based in Iran · freelance via zyrax.ir — ping me on Telegram
+      @Kian_asli.`,
     },
     experience: {
       p: "What I have done so far",

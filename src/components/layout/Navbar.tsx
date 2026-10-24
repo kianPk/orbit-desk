@@ -52,25 +52,27 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } fixed top-0 z-20 flex w-full items-center py-5 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } fixed top-0 z-20 flex w-full items-center py-4 sm:py-5 ${
+        scrolled ? "bg-primary/95 backdrop-blur" : "bg-transparent"
       }`}
+      style={{ paddingTop: "max(1rem, env(safe-area-inset-top))" }}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex min-w-0 items-center gap-2"
           onClick={() => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white ">
-            {config.html.title}
+          <img src={logo} alt="logo" className="h-8 w-8 shrink-0 object-contain sm:h-9 sm:w-9" />
+          <p className="truncate text-[15px] font-bold text-white sm:text-[18px]">
+            <span className="sm:hidden">Kian · Orbit</span>
+            <span className="hidden sm:inline">{config.html.title}</span>
           </p>
         </Link>
 
-        <ul className="hidden list-none flex-row gap-10 sm:flex">
+        <ul className="hidden list-none flex-row items-center gap-8 sm:flex">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -81,9 +83,19 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href={config.html.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#22d3ee]/40 px-3 py-1.5 text-[14px] font-semibold text-[#22d3ee] hover:bg-[#22d3ee]/10"
+            >
+              Telegram
+            </a>
+          </li>
         </ul>
 
-        <div className="flex flex-1 items-center justify-end sm:hidden">
+        <div className="flex items-center justify-end sm:hidden">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -94,7 +106,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+            } black-gradient absolute right-3 top-16 z-10 min-w-[180px] rounded-xl p-5`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
               {navLinks.map((nav) => (
@@ -110,6 +122,17 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={config.html.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[16px] font-semibold text-[#22d3ee]"
+                  onClick={() => setToggle(false)}
+                >
+                  Telegram {config.html.telegramHandle}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
