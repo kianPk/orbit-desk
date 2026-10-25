@@ -26,6 +26,19 @@ Build for GitHub Pages (`base: /orbit-desk/`):
 npm run build
 ```
 
+## Recent flagship projects
+
+| Project | Stack | Demo |
+| --- | --- | --- |
+| [TradeForge](https://github.com/kianPk/tradeforge) | Solidity / Foundry | Protocol lab |
+| [VaultForge](https://github.com/kianPk/vaultforge) | ERC-4626 vault | Foundry tests |
+| [Loadforge](https://github.com/kianPk/loadforge) | Rust / Tokio | Load dashboard |
+| [Lumen Commerce](https://github.com/kianPk/lumen-commerce) | Vue / Node | [Pages](https://kianpk.github.io/lumen-commerce/) |
+| [Sentinel Grid](https://github.com/kianPk/sentinel-grid) | Vue SOC console | [Pages](https://kianpk.github.io/sentinel-grid/) |
+| [Orbit Desk](https://github.com/kianPk/orbit-desk) | React / Three.js | [Pages](https://kianpk.github.io/orbit-desk/) |
+
+Contact includes Telegram: [t.me/Kian_asli](https://t.me/Kian_asli).
+
 ## Customize
 
 - Identity & copy → `src/constants/config.ts`
