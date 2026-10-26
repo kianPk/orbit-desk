@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-10-26
+
+### Improved
+- Mobile performance: quality tiers, demand frameloop + 22–28fps ticker, no HDR Environment on phones
+- Deferred WebGL mount, lighter lights/materials, IntersectionObserver stars, cheaper hero orbs
+
+
 ## [1.2.0] - 2026-10-26
 
 ### Added

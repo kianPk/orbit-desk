@@ -222,23 +222,29 @@ body {
 
 @media (max-width: 768px) {
   .hero-orb {
-    filter: blur(28px);
-    opacity: 0.4;
+    /* blur is expensive on mobile GPUs — keep soft but cheap */
+    filter: blur(18px);
+    opacity: 0.28;
+    animation-duration: 22s;
   }
 
   .hero-orb--a {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 
   .hero-orb--b {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-orb--c {
+    display: none;
   }
 
   .hero-grid {
     background-size: 36px 36px;
-    opacity: 0.3;
+    opacity: 0.18;
   }
 }
 

@@ -36,7 +36,12 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
             alt={title}
             className="h-14 w-14 object-contain sm:h-16 sm:w-16"
             animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 3.2 + index * 0.25, repeat: Infinity, ease: "easeInOut" }}
+            transition={{
+              duration: 3.2 + index * 0.25,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{ willChange: "transform" }}
           />
 
           <h3 className="text-center text-[18px] font-bold text-white sm:text-[20px]">
