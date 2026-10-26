@@ -48,3 +48,7 @@ Contact includes Telegram: [t.me/Kian_asli](https://t.me/Kian_asli).
 ## Credit
 
 Original template by [ladunjexa](https://github.com/ladunjexa/reactjs18-3d-portfolio). Remixed for Kian Zarandi (`@kianPk`).
+
+## Features
+
+- Cinematic floating PC desk with intro animation, rim lights, and mobile auto-orbit

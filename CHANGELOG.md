@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-26
+
+### Added
+- Cinematic PC hero: intro rise, idle float/yaw, cyan/violet rim lights, contact shadows, city environment
+- Hero atmosphere (drifting orbs, grid vignette, name glow, staggered text + CTA motion)
+- Richer multi-layer starfield; smoother section stagger; pulsing canvas loader
+
+### Improved
+- Mobile desk framing, auto-orbit, larger canvas share, clearer copy hierarchy
+- About service cards with softer tilt + floating icons
+
+
 ### Added
 - CONTRIBUTING and SECURITY policy docs.
 

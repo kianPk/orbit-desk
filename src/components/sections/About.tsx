@@ -18,23 +18,28 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
   <Tilt
     glareEnable
     tiltEnable
-    tiltMaxAngleX={30}
-    tiltMaxAngleY={30}
-    glareColor="#aaa6c3"
+    tiltMaxAngleX={18}
+    tiltMaxAngleY={18}
+    glareMaxOpacity={0.35}
+    glareColor="#22d3ee"
+    transitionSpeed={1200}
   >
-    <div className="max-w-[250px] w-full xs:w-[250px]">
+    <div className="w-full max-w-[250px] xs:w-[250px]">
       <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+        variants={fadeIn("right", "spring", index * 0.2, 0.65)}
+        whileHover={{ y: -6 }}
         className="green-pink-gradient shadow-card w-full rounded-[20px] p-[1px]"
       >
-        <div className="bg-tertiary flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5">
-          <img
+        <div className="bg-tertiary flex min-h-[240px] flex-col items-center justify-evenly rounded-[20px] px-10 py-5 sm:min-h-[280px] sm:px-12">
+          <motion.img
             src={icon}
-            alt="web-development"
-            className="h-16 w-16 object-contain"
+            alt={title}
+            className="h-14 w-14 object-contain sm:h-16 sm:w-16"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3.2 + index * 0.25, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          <h3 className="text-center text-[20px] font-bold text-white">
+          <h3 className="text-center text-[18px] font-bold text-white sm:text-[20px]">
             {title}
           </h3>
         </div>
